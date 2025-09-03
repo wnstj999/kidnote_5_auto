@@ -1,0 +1,1462 @@
+<!DOCTYPE html><html lang="en"><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Weeducate</title>
+  <!-- Iconic Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../../vendors/iconic-fonts/flat-icons/flaticon.css">
+    <link rel="stylesheet" href="../../vendors/iconic-fonts/font-awesome/css/all.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery UI -->
+  <link href="../../assets/css/jquery-ui.min.css" rel="stylesheet">
+  <!-- Page Specific CSS (Morris Charts.css) -->
+  <link href="../../assets/css/morris.css" rel="stylesheet">
+  <!-- Weeducate styles -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/weicon/weicon.ico">
+
+</head>
+
+<body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
+
+  <!-- Setting Panel -->
+  <div class="ms-toggler ms-settings-toggle ms-d-block-lg">
+    <i class="flaticon-paint"></i>
+  </div>
+  <div class="ms-settings-panel ms-d-block-lg">
+    <div class="row">
+
+      <div class="col-xl-4 col-md-4">
+        <h4 class="section-title">Customize</h4>
+        <div>
+          <label class="ms-switch">
+             <input type="checkbox" id="dark-mode">
+             <span class="ms-switch-slider round"></span>
+           </label>
+          <span> Dark Mode </span>
+        </div>
+        <div>
+          <label class="ms-switch">
+             <input type="checkbox" id="remove-quickbar">
+             <span class="ms-switch-slider round"></span>
+           </label>
+          <span> Remove Quickbar </span>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <h4 class="section-title">Keyboard Shortcuts</h4>
+        <p class="ms-directions mb-0"><code>Esc</code> Close Quick Bar</p>
+        <p class="ms-directions mb-0"><code>Alt + (1 -&gt; 6)</code> Open Quick Bar Tab</p>
+        <p class="ms-directions mb-0"><code>Alt + Q</code> Enable Quick Bar Configure Mode</p>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Preloader -->
+  <div id="preloader-wrap" class="loaded">
+    <div class="spinner spinner-8">
+      <div class="ms-circle1 ms-child"></div>
+      <div class="ms-circle2 ms-child"></div>
+      <div class="ms-circle3 ms-child"></div>
+      <div class="ms-circle4 ms-child"></div>
+      <div class="ms-circle5 ms-child"></div>
+      <div class="ms-circle6 ms-child"></div>
+      <div class="ms-circle7 ms-child"></div>
+      <div class="ms-circle8 ms-child"></div>
+      <div class="ms-circle9 ms-child"></div>
+      <div class="ms-circle10 ms-child"></div>
+      <div class="ms-circle11 ms-child"></div>
+      <div class="ms-circle12 ms-child"></div>
+    </div>
+  </div>
+
+  <!-- Overlays -->
+  <div class="ms-aside-overlay ms-overlay-left ms-toggler" data-target="#ms-side-nav" data-toggle="slideLeft"></div>
+  <div class="ms-aside-overlay ms-overlay-right ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"></div>
+
+  <!-- Sidebar Navigation Left -->
+  <aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left ps ps--active-y">
+
+    <!-- Logo -->
+    <div class="logo-sn ms-d-block-lg">
+      <a class="pl-0 ml-0 text-center" href="../../index.html"><img src="../../assets/img/logo/weeducate-4.png" alt="logo">  </a>
+    </div>
+
+    <!-- Navigation -->
+    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion">
+       <!-- Dashboard -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
+             </a>
+            <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
+              <li> <a href="../../index.html">Weeducate</a> </li>
+              
+            </ul>
+        </li>
+        <!-- /Dashboard -->
+        
+        <!--Proessors Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#professor" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="fa fa-user fs-16"></i>Professors</span>
+             </a>
+            <ul id="professor" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
+              <li> <a href="../professors/allprofessor.html">All Professors</a> </li>
+               <li> <a href="../professors/addprofessor.html">Add Professors</a> </li>
+                 <li> <a href="../professors/aboutprofessor.html">About Professors</a> </li>
+            </ul>
+        </li>
+        <!-- /Proessors End--->
+        
+         <!--Courses Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#courses" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="fa fa-graduation-cap fs-16"></i>Courses</span>
+             </a>
+            <ul id="courses" class="collapse" aria-labelledby="courses" data-parent="#side-nav-accordion">
+              <li> <a href="../courses/allcourses.html">All Courses</a> </li>
+               <li> <a href="../courses/addcourses.html">Add Courses</a> </li>
+                 <li> <a href="../courses/aboutcourses.html">About Courses</a> </li>
+            </ul>
+        </li>
+        <!-- /Courses End--->
+        
+        <!--Student Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#student" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="fa fa-users fs-16"></i>Student</span>
+             </a>
+            <ul id="student" class="collapse" aria-labelledby="courses" data-parent="#side-nav-accordion">
+              <li> <a href="../student/studentadd.html">Student Add</a> </li>
+               <li> <a href="../student/studenttable.html">Student Table</a> </li>
+                  </ul>
+        </li>
+        <!-- /Student End--->
+        
+        
+        <!--Staff Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#staff" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="fa fa-user-circle fs-16"></i>Staff</span>
+             </a>
+            <ul id="staff" class="collapse" aria-labelledby="staff" data-parent="#side-nav-accordion">
+              <li> <a href="../staff/addstaff.html">Add Staff</a> </li>
+               <li> <a href="../staff/staffprofile.html">Staff Proflie</a> </li>
+                 
+            </ul>
+        </li>
+        <!-- /Staff End--->
+        
+        
+        
+        <!--Fees Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#fees" aria-expanded="false" aria-controls="dashboard">
+                <span><i class="fas fa-dollar-sign"></i>Fees</span>
+             </a>
+            <ul id="fees" class="collapse" aria-labelledby="staff" data-parent="#side-nav-accordion">
+              <li> <a href="../fees/feescollection.html">Fees Collection</a> </li>
+              <li> <a href="../fees/addfees.html">Add Fees</a> </li>
+              <li> <a href="../fees/feesrecepit.html">Fees Recepit</a> </li>
+               
+                 
+            </ul>
+        </li>
+        <!-- /Fees End--->
+        
+        <!--Departement Start-->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#departement" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="fa fa-building fs-16"></i>Departement</span>
+             </a>
+            <ul id="departement" class="collapse" aria-labelledby="departement" data-parent="#side-nav-accordion">
+              <li> <a href="../departement/departement.html">Departement List</a> </li>
+              <li> <a href="../departement/adddepartement.html">Add Departement</a> </li>
+               
+                 
+            </ul>
+        </li>
+        <!-- /Departemnt End--->
+        
+        
+        <!--Holiday Start-->
+        <li class="menu-item">
+          <a href="../holidays/holiday.html">
+            <span><i class="fa fa-calendar fs-16"></i>Holidays</span>
+          </a>
+        </li>
+        <!-- /Holiday End--->
+        
+          <!--Bonus Pages -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+               <span><i class="material-icons fs-16">dashboard</i>Bonus Pages </span>
+             </a>
+            <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
+             
+              <li> <a href="../dashboard/web-analytics.html"> Web Analytics </a> </li>
+              <li> <a href="../dashboard/social-media.html">Social Media</a> </li>
+              <li> <a href="../dashboard/project-management.html">Project Management</a> </li>
+              <li> <a href="../dashboard/client-management.html">Student Management</a> </li>
+            </ul>
+        </li>
+        <!-- /Bonus Pages -->
+        <li class="menu-item">
+          <a href="../widgets.html">
+            <span><i class="material-icons fs-16">widgets</i>Widgets</span>
+          </a>
+        </li>
+        <!-- Basic UI Elements -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#basic-elements" aria-expanded="false" aria-controls="basic-elements">
+              <span><i class="material-icons fs-16">filter_list</i>Basic UI Elements</span>
+            </a>
+            <ul id="basic-elements" class="collapse" aria-labelledby="basic-elements" data-parent="#side-nav-accordion">
+              <li> <a href="../ui-basic/accordions.html">Accordions</a> </li>
+              <li> <a href="../ui-basic/alerts.html">Alerts</a> </li>
+              <li> <a href="../ui-basic/buttons.html">Buttons</a> </li>
+              <li> <a href="../ui-basic/breadcrumbs.html">Breadcrumbs</a> </li>
+              <li> <a href="../ui-basic/badges.html">Badges</a> </li>
+              <li> <a href="../ui-basic/cards.html">Cards</a> </li>
+              <li> <a href="../ui-basic/progress-bars.html">Progress Bars</a> </li>
+              <li> <a href="../ui-basic/preloaders.html">Pre-loaders</a> </li>
+              <li> <a href="../ui-basic/pagination.html">Pagination</a> </li>
+              <li> <a href="../ui-basic/tabs.html">Tabs</a> </li>
+
+              <li> <a href="../ui-basic/typography.html">Typography</a> </li>
+            </ul>
+        </li>
+        <!-- /Basic UI Elements -->
+        <!-- Advanced UI Elements -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#advanced-elements" aria-expanded="false" aria-controls="advanced-elements">
+              <span><i class="material-icons fs-16">code</i>Advanced UI Elements</span>
+            </a>
+            <ul id="advanced-elements" class="collapse" aria-labelledby="advanced-elements" data-parent="#side-nav-accordion">
+              <li> <a href="../ui-advanced/draggables.html">Draggables</a> </li>
+              <li> <a href="../ui-advanced/sliders.html">Sliders</a> </li>
+              <li> <a href="../ui-advanced/modals.html">Modals</a> </li>
+              <li> <a href="../ui-advanced/rating.html">Rating</a> </li>
+              <li> <a href="../ui-advanced/tour.html">Tour</a> </li>
+              <li> <a href="../ui-advanced/cropper.html">Cropper</a> </li>
+              <li> <a href="../ui-advanced/range-slider.html">Range Slider</a> </li>
+            </ul>
+        </li>
+        <!-- /Advanced UI Elements -->
+        <li class="menu-item">
+            <a href="../animation.html">
+              <span><i class="material-icons fs-16">format_paint</i>Animations</span>
+            </a>
+        </li>
+        <!-- Form Elements -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <span><i class="material-icons fs-16">input</i>Form Elements</span>
+            </a>
+            <ul id="form-elements" class="collapse" aria-labelledby="form-elements" data-parent="#side-nav-accordion">
+              <li> <a href="../form/form-elements.html">Form Elements</a> </li>
+              <li> <a href="../form/form-layout.html">Form Layouts</a> </li>
+              <li> <a href="../form/form-validation.html">Form Validation</a> </li>
+              <li> <a href="../form/form-wizard.html">Form Wizard</a> </li>
+            </ul>
+        </li>
+        <!-- /Form Elements -->
+        <!-- Charts -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron active" data-toggle="collapse" data-target="#charts" aria-expanded="false" aria-controls="charts">
+              <span><i class="material-icons fs-16">equalizer</i>Charts</span>
+            </a>
+            <ul id="charts" class="collapse show" aria-labelledby="charts" data-parent="#side-nav-accordion">
+              <li> <a href="../charts/chartjs.html">Chart JS</a> </li>
+              <li> <a href="../charts/morris-charts.html" class="active">Morris Chart</a> </li>
+            </ul>
+        </li>
+        <!-- /Charts -->
+        <!-- Tables -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#tables" aria-expanded="false" aria-controls="tables">
+              <span><i class="material-icons fs-16">tune</i>Tables</span>
+            </a>
+            <ul id="tables" class="collapse" aria-labelledby="tables" data-parent="#side-nav-accordion">
+              <li> <a href="../tables/basic-tables.html">Basic Tables</a> </li>
+              <li> <a href="../tables/data-tables.html">Data tables</a> </li>
+            </ul>
+        </li>
+        <!-- /Tables -->
+        <!-- Popups -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#popups" aria-expanded="false" aria-controls="popups">
+              <span><i class="material-icons fs-16">message</i>Popups</span>
+            </a>
+            <ul id="popups" class="collapse" aria-labelledby="popups" data-parent="#side-nav-accordion">
+              <li> <a href="../popups/sweet-alerts.html">Sweet Alerts</a> </li>
+              <li> <a href="../popups/toast.html">Toast</a> </li>
+            </ul>
+        </li>
+        <!-- /Popups -->
+        <!-- Icons -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#icons" aria-expanded="false" aria-controls="icons">
+              <span><i class="material-icons fs-16">border_color</i>Icons</span>
+            </a>
+            <ul id="icons" class="collapse" aria-labelledby="icons" data-parent="#side-nav-accordion">
+              <li> <a href="../icons/fontawesome.html">Fontawesome</a> </li>
+              <li> <a href="../icons/flaticons.html">Flaticons</a> </li>
+              <li> <a href="../icons/materialize.html">Materialize</a> </li>
+            </ul>
+        </li>
+        <!-- /Icons -->
+        <!-- Maps -->
+        <li class="menu-item">
+            <a href="#" class="has-chevron" data-toggle="collapse" data-target="#maps" aria-expanded="false" aria-controls="maps">
+              <span><i class="material-icons fs-16">map</i>Maps</span>
+            </a>
+            <ul id="maps" class="collapse" aria-labelledby="maps" data-parent="#side-nav-accordion">
+              <li> <a href="../maps/google-maps.html">Google Maps</a> </li>
+              <li> <a href="../maps/vector-maps.html">Vector Maps</a> </li>
+            </ul>
+        </li>
+        <!-- /Maps -->
+        <!-- Pages -->
+        <li class="menu-item">
+          <a href="#" class="has-chevron" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages">
+            <span><i class="material-icons fs-16">insert_drive_file</i>Pages</span>
+          </a>
+          <ul id="pages" class="collapse" aria-labelledby="pages" data-parent="#side-nav-accordion">
+            <li class="menu-item">
+              <a href="#" class="has-chevron" data-toggle="collapse" data-target="#authentication" aria-expanded="false" aria-controls="authentication">Authentication</a>
+              <ul id="authentication" class="collapse" aria-labelledby="authentication" data-parent="#pages">
+                <li> <a href="../prebuilt-pages/default-login.html">Default Login</a> </li>
+                <li> <a href="../prebuilt-pages/modal-login.html">Modal Login</a> </li>
+                <li> <a href="../prebuilt-pages/default-register.html">Default Registration</a> </li>
+                <li> <a href="../prebuilt-pages/modal-register.html">Modal Registration</a> </li>
+                <li> <a href="../prebuilt-pages/lock-screen.html">Lock Screen</a> </li>
+              </ul>
+            </li>
+            <li> <a href="../prebuilt-pages/coming-soon.html">Coming Soon</a> </li>
+            <li> <a href="../prebuilt-pages/error.html">Error Page</a> </li>
+            <li class="menu-item"> <a href="../prebuilt-pages/faq.html"> FAQ </a> </li>
+            <li class="menu-item"> <a href="../prebuilt-pages/portfolio.html"> Portfolio </a> </li>
+            <li class="menu-item"> <a href="../prebuilt-pages/user-profile.html"> User Profile </a> </li>
+            <li class="menu-item"> <a href="../prebuilt-pages/invoice.html"> Invoice </a> </li>
+
+          </ul>
+        </li>
+        <!-- /Pages -->
+        <!-- Apps -->
+        <li class="menu-item">
+          <a href="#" class="has-chevron" data-toggle="collapse" data-target="#apps" aria-expanded="false" aria-controls="apps">
+            <span><i class="material-icons fs-16">phone_iphone</i>Apps</span>
+          </a>
+          <ul id="apps" class="collapse" aria-labelledby="apps" data-parent="#side-nav-accordion">
+            <li> <a href="../apps/chat.html">Chat</a> </li>
+            <li> <a href="../apps/email.html">Email</a> </li>
+            <li> <a href="../apps/to-do-list.html">To-do List</a> </li>
+          </ul>
+        </li>
+        <!-- /Apps -->
+    </ul>
+
+
+  <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 600px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 302px;"></div></div></aside>
+
+  <!-- Sidebar Right -->
+  <aside id="ms-recent-activity" class="side-nav fixed ms-aside-right ms-scrollable ps ps--active-y">
+
+    <div class="ms-aside-header">
+      <ul class="nav nav-tabs tabs-bordered d-flex nav-justified mb-3" role="tablist">
+        <li role="presentation" class="fs-12"><a href="#activityLog" aria-controls="activityLog" class="active" role="tab" data-toggle="tab"> Activity Log</a></li>
+        <li role="presentation" class="fs-12"><a href="#recentPosts" aria-controls="recentPosts" role="tab" data-toggle="tab"> Settings </a></li>
+        <li><button type="button" class="close ms-toggler text-center" data-target="#ms-recent-activity" data-toggle="slideRight"><span aria-hidden="true">×</span></button></li>
+      </ul>
+    </div>
+
+    <div class="ms-aside-body">
+
+       <div class="tab-content">
+
+         <div role="tabpanel" class="tab-pane active fade show" id="activityLog">
+           <ul class="ms-activity-log">
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-light">
+                 <i class="flaticon-gear"></i>
+               </div>
+               <h6>Update 1.0.0 Pushed</h6>
+               <span> <i class="material-icons">event</i>1 January, 2021</span>
+               <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
+             </li>
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-success">
+                 <i class="flaticon-tick-inside-circle"></i>
+               </div>
+               <h6>Profile Updated</h6>
+               <span> <i class="material-icons">event</i>4 March, 2018</span>
+               <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+             </li>
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-warning">
+                 <i class="flaticon-alert-1"></i>
+               </div>
+               <h6>Your payment is due</h6>
+               <span> <i class="material-icons">event</i>1 January, 2021</span>
+               <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
+             </li>
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-danger">
+                 <i class="flaticon-alert"></i>
+               </div>
+               <h6>Database Error</h6>
+               <span> <i class="material-icons">event</i>4 March, 2018</span>
+               <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+             </li>
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-info">
+                 <i class="flaticon-information"></i>
+               </div>
+               <h6>Checkout what's Trending</h6>
+               <span> <i class="material-icons">event</i>1 January, 2021</span>
+               <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
+             </li>
+             <li>
+               <div class="ms-btn-icon btn-pill icon btn-secondary">
+                 <i class="flaticon-diamond"></i>
+               </div>
+               <h6>Your Dashboard is ready</h6>
+               <span> <i class="material-icons">event</i>4 March, 2018</span>
+               <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+             </li>
+           </ul>
+           <a href="#" class="btn btn-primary d-block"> View All </a>
+         </div>
+
+         <div role="tabpanel" class="tab-pane fade" id="recentPosts">
+
+           <h6>General Settings</h6>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Location Tracking</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Allow Notifications</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Allow Popups</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox" checked="">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <h6>Log Settings</h6>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Enable Logging</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox" checked="">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Audit Logs</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Error Logs</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox" checked="">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <h6>Advanced Settings</h6>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Enable Logging</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox" checked="">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Audit Logs</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+           <div class="ms-form-group">
+             <span class="ms-option-name fs-14">Error Logs</span>
+             <label class="ms-switch float-right">
+               <input type="checkbox" checked="">
+               <span class="ms-switch-slider round"></span>
+             </label>
+           </div>
+
+         </div>
+
+       </div>
+
+    </div>
+
+  <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 600px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 308px;"></div></div></aside>
+
+  <!-- Main Content -->
+  <main class="body-content">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar ms-navbar">
+
+      <div class="ms-aside-toggler ms-toggler pl-0" data-target="#ms-side-nav" data-toggle="slideLeft">
+        <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span>
+      </div>
+
+      <div class="logo-sn logo-sm ms-d-block-sm">
+        <a class="pl-0 ml-0 text-center navbar-brand mr-0" href="../../index.html"><img src="../../assets/img/logo/weeducate-4.png" alt="logo"> </a>
+        </div>
+
+      <ul class="ms-nav-list ms-inline mb-0" id="ms-nav-options">
+        <li class="ms-nav-item ms-search-form pb-0 py-0">
+          <form class="ms-form" method="post">
+            <div class="ms-form-group my-0 mb-0 has-icon fs-14">
+              <input type="search" class="ms-form-input" name="search" placeholder="Search here..." value="">
+              <i class="flaticon-search text-disabled"></i>
+            </div>
+          </form>
+        </li>
+        <li class="ms-nav-item dropdown">
+          <a href="#" class="text-disabled ms-has-notification" id="mailDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flaticon-mail"></i></a>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="mailDropdown">
+            <li class="dropdown-menu-header">
+              <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Mail</span></h6><span class="badge badge-pill badge-success">3 New</span>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="ms-scrollable ms-dropdown-list ps">
+              <a class="media p-2" href="#">
+                <div class="ms-chat-status ms-status-offline ms-chat-img mr-2 align-self-center">
+                  <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body">
+                  <span>Hey man, looking forward to your new project.</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 30 seconds ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="ms-chat-status ms-status-online ms-chat-img mr-2 align-self-center">
+                  <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body">
+                  <span>Dear John, I was told you bought Weeducate! Send me your feedback</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 28 minutes ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="ms-chat-status ms-status-offline ms-chat-img mr-2 align-self-center">
+                  <img src="../../assets/img/we-educate/topper-2.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body">
+                  <span>How many people are we inviting to the dashboard?</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 6 hours ago</p>
+                </div>
+              </a>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-menu-footer text-center">
+              <a href="../apps/email.html">Go to Inbox</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ms-nav-item dropdown">
+          <a href="#" class="text-disabled ms-has-notification" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flaticon-bell"></i></a>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+            <li class="dropdown-menu-header">
+              <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Notifications</span></h6><span class="badge badge-pill badge-info">4 New</span>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="ms-scrollable ms-dropdown-list ps">
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>12 ways to improve your crypto dashboard</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 30 seconds ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>You have newly registered users</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 45 minutes ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>Your account was logged in from an unauthorized IP</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 2 hours ago</p>
+                </div>
+              </a>
+              <a class="media p-2" href="#">
+                <div class="media-body">
+                  <span>An application form has been submitted</span>
+                  <p class="fs-10 my-1 text-disabled"><i class="material-icons">access_time</i> 1 day ago</p>
+                </div>
+              </a>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-menu-footer text-center">
+              <a href="#">View all Notifications</a>
+            </li>
+          </ul>
+        </li>
+        <li class="ms-nav-item">
+          <a href="#" class="text-disabled ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"><i class="flaticon-menu"></i></a>
+        </li>
+        <li class="ms-nav-item ms-nav-user dropdown">
+          <a href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class="ms-user-img ms-img-round float-right" src="../../assets/img/we-educate/new-student-5.jpg" alt="people"> </a>
+          <ul class="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
+            <li class="dropdown-menu-header">
+              <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Welcome, Anny Farisha</span></h6>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="ms-dropdown-list">
+              <a class="media fs-14 p-2" href="../prebuilt-pages/user-profile.html"> <span><i class="flaticon-user mr-2"></i> Profile</span> </a>
+              <a class="media fs-14 p-2" href="../apps/email.html"> <span><i class="flaticon-mail mr-2"></i> Inbox</span> <span class="badge badge-pill badge-info">3</span> </a>
+              <a class="media fs-14 p-2" href="../prebuilt-pages/user-profile.html"> <span><i class="flaticon-gear mr-2"></i> Account Settings</span> </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-menu-footer">
+              <a class="media fs-14 p-2" href="../prebuilt-pages/lock-screen.html"> <span><i class="flaticon-security mr-2"></i> Lock</span> </a>
+            </li>
+            <li class="dropdown-menu-footer">
+              <a class="media fs-14 p-2" href="../prebuilt-pages/default-login.html"> <span><i class="flaticon-shut-down mr-2"></i> Logout</span> </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="ms-toggler ms-d-block-sm pr-0 ms-nav-toggler" data-toggle="slideDown" data-target="#ms-nav-options">
+        <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span>
+        <span class="ms-toggler-bar bg-primary"></span>
+      </div>
+
+    </nav>
+
+    <!-- Body Content Wrapper -->
+    <div class="ms-content-wrapper">
+      <div class="row">
+
+        <div class="col-md-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb pl-0">
+              <li class="breadcrumb-item"><a href="#"><i class="material-icons">home</i> Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Charts</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Morris Charts</li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Bar Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="bar-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.59375px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.819976806640625" y="300" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,300H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="231.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">25</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,231.25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="162.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,162.5H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="93.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,93.75H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="279.02285548618863" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="171.1599884033203" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><text x="63.29712132045201" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><rect x="49.81426293509347" y="25" width="11.98285838535854" height="275" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="64.797121320452" y="52.5" width="11.98285838535854" height="247.5" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="85.76855196271623" y="93.75" width="11.98285838535854" height="206.25" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="100.75141034807477" y="121.25" width="11.98285838535854" height="178.75" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="121.72284099033901" y="162.5" width="11.98285838535854" height="137.5" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="136.70569937569755" y="190" width="11.98285838535854" height="110" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="157.6771300179618" y="93.75" width="11.98285838535854" height="206.25" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="172.6599884033203" y="121.25" width="11.98285838535854" height="178.75" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="193.63141904558455" y="162.5" width="11.98285838535854" height="137.5" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="208.6142774309431" y="190" width="11.98285838535854" height="110" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="229.58570807320731" y="93.75" width="11.98285838535854" height="206.25" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="244.56856645856584" y="121.25" width="11.98285838535854" height="178.75" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="265.53999710083013" y="25" width="11.98285838535854" height="275" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="280.5228554861887" y="52.5" width="11.98285838535854" height="247.5" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="left: 235.984px; top: 131px;"><div class="morris-hover-row-label">2012</div><div class="morris-hover-point" style="color: #0b62a4">
+  Series A:
+  100
+</div><div class="morris-hover-point" style="color: #7a92a3">
+  Series B:
+  90
+</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Line Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="line-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.59375px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="26.159988403320312" y="300" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,300H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="231.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">5</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,231.25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="162.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,162.5H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="93.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,93.75H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="297" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="232.45920312608618" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><text x="167.91840625217236" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="103.37760937825854" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><text x="38.65998840332031" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><path fill="none" stroke="#0b62a4" d="M38.65998840332031,25C54.83939364705487,59.375,87.19820413452399,136.68348153214774,103.37760937825854,162.5C119.51280859673699,188.24598153214774,151.7832070336939,222.65625,167.91840625217236,231.25C184.0536054706508,239.84375,216.32400390760773,257.03125,232.45920312608618,231.25C248.59440234456463,205.46875,280.8648007815215,76.5625,297,25" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="38.65998840332031" cy="25" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="103.37760937825854" cy="162.5" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="167.91840625217236" cy="231.25" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="232.45920312608618" cy="231.25" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="297" cy="25" r="7" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 255.984px; top: 35px;"><div class="morris-hover-row-label">2012</div><div class="morris-hover-point" style="color: #0b62a4">
+  Value:
+  20
+</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Stacked Bar Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="stacked-bar-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.1875px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="26.159988403320312" y="300" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,300H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="231.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,231.25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="162.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,162.5H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="93.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,93.75H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="26.159988403320312" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><path fill="none" stroke="#aaaaaa" d="M38.65998840332031,25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="264.70749855041504" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011 Q4</tspan></text><text x="135.5374927520752" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011 Q2</tspan></text><rect x="46.73311376571655" y="231.25" width="48.43875217437744" height="68.75" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="46.73311376571655" y="185.41666666666666" width="48.43875217437744" height="45.83333333333334" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="46.73311376571655" y="116.66666666666666" width="48.43875217437744" height="68.75" rx="0" ry="0" fill="#4da74d" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="111.31811666488647" y="254.16666666666666" width="48.43875217437744" height="45.83333333333334" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="111.31811666488647" y="231.24999999999997" width="48.43875217437744" height="22.916666666666686" rx="0" ry="0" fill="#4da74d" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="175.9031195640564" y="300" width="48.43875217437744" height="0" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="175.9031195640564" y="254.16666666666666" width="48.43875217437744" height="45.83333333333334" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="175.9031195640564" y="162.49999999999997" width="48.43875217437744" height="91.66666666666669" rx="0" ry="0" fill="#4da74d" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="240.48812246322632" y="254.16666666666666" width="48.43875217437744" height="45.83333333333334" rx="0" ry="0" fill="#0b62a4" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="240.48812246322632" y="162.49999999999997" width="48.43875217437744" height="91.66666666666669" rx="0" ry="0" fill="#7a92a3" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="240.48812246322632" y="93.74999999999997" width="48.43875217437744" height="68.75" rx="0" ry="0" fill="#4da74d" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="left: 233.02px; top: 122px;"><div class="morris-hover-row-label">2011 Q4</div><div class="morris-hover-point" style="color: #0b62a4">
+  Y:
+  2
+</div><div class="morris-hover-point" style="color: #7a92a3">
+  Z:
+  4
+</div><div class="morris-hover-point" style="color: #4da74d">
+  A:
+  3
+</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Doughnut Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="doughnut-chart"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.1875px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#0b62a4" d="M161,271.6666666666667A100.66666666666667,100.66666666666667,0,0,0,256.1060666042932,203.99414906975971" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#0b62a4" stroke="#ffffff" d="M161,274.6666666666667A103.66666666666667,103.66666666666667,0,0,0,258.94035335740125,204.97741841289826L298.93528865125967,218.85244136607537A146,146,0,0,1,161,317Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#3980b5" d="M256.1060666042932,203.99414906975971A100.66666666666667,100.66666666666667,0,0,0,70.70162466815853,126.50302043725145" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#3980b5" stroke="#ffffff" d="M258.94035335740125,204.97741841289826A103.66666666666667,103.66666666666667,0,0,0,68.01061348277251,125.17695150988477L25.55243700223778,104.25453065587719A151,151,0,0,1,303.6590999064398,220.49122360463957Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#679dc6" d="M70.70162466815853,126.50302043725145A100.66666666666667,100.66666666666667,0,0,0,160.9683746344741,271.66666169896587" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#679dc6" stroke="#ffffff" d="M68.01061348277251,125.17695150988477A103.66666666666667,103.66666666666667,0,0,0,160.96743215669352,274.6666615509218L160.95413274801209,316.99999279518886A146,146,0,0,1,30.037455644547805,106.46464553482164Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="161" y="161" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(1.5722,0,0,1.5722,-92.1297,-98.4243)" stroke-width="0.6360375275938189"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">In-Store Sales</tspan></text><text x="161" y="181" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(2.0972,0,0,2.0972,-176.7669,-189.8194)" stroke-width="0.4768211920529801"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Real Time Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="real-time-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.78125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="33.65997314453125" y="300" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">-1</tspan></text><path fill="none" stroke="#aaaaaa" d="M46.15997314453125,300H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.65997314453125" y="231.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">-0.5</tspan></text><path fill="none" stroke="#aaaaaa" d="M46.15997314453125,231.25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.65997314453125" y="162.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M46.15997314453125,162.5H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.65997314453125" y="93.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.5</tspan></text><path fill="none" stroke="#aaaaaa" d="M46.15997314453125,93.75H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="33.65997314453125" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan></text><path fill="none" stroke="#aaaaaa" d="M46.15997314453125,25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="297" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">360</tspan></text><text x="248.22555033365884" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">290</tspan></text><text x="199.4511006673177" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">220</tspan></text><text x="150.67665100097656" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150</tspan></text><text x="108.86997985839844" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">90</tspan></text><text x="67.06330871582031" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text><path fill="none" stroke="#7a92a3" d="M46.15997314453125,25.52249999999998C47.90191777547201,26.56406249999999,51.385807037353516,28.143593750000022,53.12775166829427,29.688750000000027C54.86969629923503,31.233906250000032,58.35358556111653,35.36234375000002,60.09553019205729,37.88375000000002C61.83747482299805,40.40515625000002,65.32136408487956,46.436250000000015,67.06330871582031,49.860000000000014C68.80525334676106,53.283750000000005,72.28914260864258,61.05249999999998,74.03108723958333,65.27374999999998C75.77303187052408,69.49499999999998,79.2569211324056,78.74015625000003,80.99886576334634,83.63000000000002C82.74081039428711,88.51984375000004,86.22469965616861,98.98187499999997,87.96664428710938,104.39249999999998C89.70858891805013,109.80312499999998,93.19247817993164,121.15031250000001,94.93442281087239,126.91500000000002C96.67636744181314,132.67968750000003,100.16025670369466,144.563125,101.90220133463541,150.51000000000002C103.64414596557617,156.45687500000003,107.12803522745767,168.543125,108.86997985839844,174.49C110.61192448933919,180.436875,114.0958137512207,192.32031249999997,115.83775838216145,198.08499999999998C117.5797030131022,203.8496875,121.06359227498372,215.196875,122.80553690592447,220.60750000000002C124.54748153686523,226.01812500000003,128.03137079874674,236.48015625,129.7733154296875,241.37C131.51526006062824,246.25984375,134.99914932250977,255.505,136.7410939534505,259.72625C138.48303858439127,263.9475,141.96692784627277,271.71625,143.70887247721353,275.14C145.4508171081543,278.56374999999997,148.9347063700358,284.59484375,150.67665100097656,287.11625C152.4185956319173,289.63765624999996,155.90248489379883,293.76609375,157.64442952473956,295.31125C159.38637415568033,296.85640624999996,162.87026341756183,298.95671875,164.6122080485026,299.4775C166.35415267944336,299.99828125000005,169.83804194132486,299.99828125000005,171.57998657226562,299.4775C173.32193120320636,298.95671875,176.8058204650879,296.85640624999996,178.54776509602863,295.31125C180.2897097269694,293.76609375,183.7735989888509,289.63765624999996,185.51554361979166,287.11625C187.25748825073242,284.59484375,190.74137751261392,278.56374999999997,192.4833221435547,275.14C194.22526677449542,271.71625,197.70915603637695,263.9475,199.4511006673177,259.72625C201.19304529825845,255.505,204.67693456013996,246.25984375000002,206.41887919108072,241.37C208.16082382202148,236.48015625,211.64471308390299,226.01812500000003,213.38665771484375,220.60750000000002C215.1286023457845,215.19687500000003,218.61249160766602,203.84968749999996,220.35443623860675,198.08499999999998C222.09638086954752,192.32031249999997,225.58027013142902,180.43687500000001,227.32221476236978,174.49C229.06415939331055,168.543125,232.54804865519205,156.45687500000003,234.2899932861328,150.51000000000002C236.03193791707355,144.56312500000004,239.51582717895508,132.6796875,241.25777180989581,126.91500000000002C242.99971644083658,121.1503125,246.48360570271808,109.80312499999998,248.22555033365884,104.39249999999998C249.9674949645996,98.98187499999999,253.4513842264811,88.51984375000004,255.19332885742188,83.63000000000002C256.9352734883626,78.74015625000003,260.41916275024414,69.49499999999998,262.1611073811849,65.27374999999998C263.9030520121256,61.05249999999998,267.38694127400714,53.28375,269.1288859049479,49.860000000000014C270.8708305358887,46.43625,274.35471979777014,40.405156250000026,276.09666442871094,37.88375000000002C277.8386090596517,35.36234375000003,281.3224983215332,31.233906250000032,283.06444295247394,29.688750000000027C284.8063875834147,28.143593750000022,288.2902768452962,26.043281249999982,290.03222147623694,25.52249999999998C291.77416610717773,25.00171874999997,295.2580553690592,25.52249999999998,297,25.52249999999998" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#0b62a4" d="M46.15997314453125,150.51000000000002C47.90191777547201,144.61125,51.385807037353516,132.67968750000003,53.12775166829427,126.91500000000002C54.86969629923503,121.15031250000001,58.35358556111653,109.80312499999998,60.09553019205729,104.39249999999998C61.83747482299805,98.98187499999999,65.32136408487956,88.51984375000002,67.06330871582031,83.63000000000002C68.80525334676106,78.74015625000003,72.28914260864258,69.49499999999998,74.03108723958333,65.27374999999998C75.77303187052408,61.05249999999998,79.2569211324056,53.283750000000005,80.99886576334634,49.860000000000014C82.74081039428711,46.436250000000015,86.22469965616861,40.40515625000002,87.96664428710938,37.88375000000002C89.70858891805013,35.36234375000002,93.19247817993164,31.233906250000032,94.93442281087239,29.688750000000027C96.67636744181314,28.143593750000022,100.16025670369466,26.043281249999986,101.90220133463541,25.52249999999998C103.64414596557617,25.001718749999974,107.12803522745767,25.001718749999974,108.86997985839844,25.52249999999998C110.61192448933919,26.043281249999986,114.0958137512207,28.143593750000022,115.83775838216145,29.688750000000027C117.5797030131022,31.233906250000032,121.06359227498372,35.36234375000002,122.80553690592447,37.88375000000002C124.54748153686523,40.40515625000002,128.03137079874674,46.436250000000015,129.7733154296875,49.860000000000014C131.51526006062824,53.28375,134.99914932250977,61.05249999999999,136.7410939534505,65.27374999999998C138.48303858439127,69.49499999999999,141.96692784627277,78.74015625000003,143.70887247721353,83.63000000000002C145.4508171081543,88.51984375000002,148.9347063700358,98.98187499999997,150.67665100097656,104.39249999999998C152.4185956319173,109.80312499999997,155.90248489379883,121.15031250000003,157.64442952473956,126.91500000000002C159.38637415568033,132.67968750000003,162.87026341756183,144.563125,164.6122080485026,150.51000000000002C166.35415267944336,156.45687500000003,169.83804194132486,168.543125,171.57998657226562,174.49C173.32193120320636,180.436875,176.8058204650879,192.3203125,178.54776509602863,198.08499999999998C180.2897097269694,203.8496875,183.7735989888509,215.196875,185.51554361979166,220.60750000000002C187.25748825073242,226.01812500000003,190.74137751261392,236.48015625,192.4833221435547,241.37C194.22526677449542,246.25984375,197.70915603637695,255.505,199.4511006673177,259.72625C201.19304529825845,263.9475,204.67693456013996,271.71625,206.41887919108072,275.14C208.16082382202148,278.56374999999997,211.64471308390299,284.59484375,213.38665771484375,287.11625C215.1286023457845,289.63765624999996,218.61249160766602,293.76609375,220.35443623860675,295.31125C222.09638086954752,296.85640624999996,225.58027013142902,298.95671875,227.32221476236978,299.4775C229.06415939331055,299.99828125000005,232.54804865519205,299.99828125000005,234.2899932861328,299.4775C236.03193791707355,298.95671875,239.51582717895508,296.85640624999996,241.25777180989581,295.31125C242.99971644083658,293.76609375,246.48360570271808,289.63765624999996,248.22555033365884,287.11625C249.9674949645996,284.59484375,253.4513842264811,278.56374999999997,255.19332885742188,275.14C256.9352734883626,271.71625,260.41916275024414,263.9475,262.1611073811849,259.72625C263.9030520121256,255.505,267.38694127400714,246.25984375,269.1288859049479,241.37C270.8708305358887,236.48015625,274.35471979777014,226.01812500000005,276.09666442871094,220.60750000000002C277.8386090596517,215.19687500000003,281.3224983215332,203.8496875,283.06444295247394,198.08499999999998C284.8063875834147,192.32031249999997,288.2902768452962,180.436875,290.03222147623694,174.49C291.77416610717773,168.54312499999997,295.2580553690592,156.50500000000002,297,150.51000000000002" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="46.15997314453125" cy="25.52249999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="53.12775166829427" cy="29.688750000000027" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="60.09553019205729" cy="37.88375000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="67.06330871582031" cy="49.860000000000014" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="74.03108723958333" cy="65.27374999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="80.99886576334634" cy="83.63000000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.96664428710938" cy="104.39249999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="94.93442281087239" cy="126.91500000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="101.90220133463541" cy="150.51000000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="108.86997985839844" cy="174.49" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.83775838216145" cy="198.08499999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="122.80553690592447" cy="220.60750000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="129.7733154296875" cy="241.37" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="136.7410939534505" cy="259.72625" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="143.70887247721353" cy="275.14" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="150.67665100097656" cy="287.11625" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="157.64442952473956" cy="295.31125" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="164.6122080485026" cy="299.4775" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.57998657226562" cy="299.4775" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="178.54776509602863" cy="295.31125" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="185.51554361979166" cy="287.11625" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.4833221435547" cy="275.14" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="199.4511006673177" cy="259.72625" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="206.41887919108072" cy="241.37" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="213.38665771484375" cy="220.60750000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="220.35443623860675" cy="198.08499999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="227.32221476236978" cy="174.49" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="234.2899932861328" cy="150.51000000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="241.25777180989581" cy="126.91500000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="248.22555033365884" cy="104.39249999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.19332885742188" cy="83.63000000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="262.1611073811849" cy="65.27374999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.1288859049479" cy="49.860000000000014" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="276.09666442871094" cy="37.88375000000002" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="283.06444295247394" cy="29.688750000000027" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="290.03222147623694" cy="25.52249999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="297" cy="25.52249999999998" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="46.15997314453125" cy="150.51000000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="53.12775166829427" cy="126.91500000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="60.09553019205729" cy="104.39249999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="67.06330871582031" cy="83.63000000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="74.03108723958333" cy="65.27374999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="80.99886576334634" cy="49.860000000000014" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.96664428710938" cy="37.88375000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="94.93442281087239" cy="29.688750000000027" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="101.90220133463541" cy="25.52249999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="108.86997985839844" cy="25.52249999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="115.83775838216145" cy="29.688750000000027" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="122.80553690592447" cy="37.88375000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="129.7733154296875" cy="49.860000000000014" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="136.7410939534505" cy="65.27374999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="143.70887247721353" cy="83.63000000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="150.67665100097656" cy="104.39249999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="157.64442952473956" cy="126.91500000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="164.6122080485026" cy="150.51000000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.57998657226562" cy="174.49" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="178.54776509602863" cy="198.08499999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="185.51554361979166" cy="220.60750000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="192.4833221435547" cy="241.37" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="199.4511006673177" cy="259.72625" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="206.41887919108072" cy="275.14" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="213.38665771484375" cy="287.11625" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="220.35443623860675" cy="295.31125" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="227.32221476236978" cy="299.4775" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="234.2899932861328" cy="299.4775" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="241.25777180989581" cy="295.31125" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="248.22555033365884" cy="287.11625" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.19332885742188" cy="275.14" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="262.1611073811849" cy="259.72625" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="269.1288859049479" cy="241.37" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="276.09666442871094" cy="220.60750000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="283.06444295247394" cy="198.08499999999998" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="290.03222147623694" cy="174.49" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="297" cy="150.51000000000002" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>Area Chart</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div id="area-chart" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="342" version="1.1" width="322" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; top: -0.78125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.819976806640625" y="300" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,300H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="231.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,231.25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="162.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,162.5H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="93.75" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,93.75H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.819976806640625" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">200</tspan></text><path fill="none" stroke="#aaaaaa" d="M45.319976806640625,25H297" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="297" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="213.14494891321206" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="129.17502789342853" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2008</tspan></text><text x="45.319976806640625" y="312.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,8.5)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2006</tspan></text><path fill="#a8b4bd" stroke="none" d="M45.319976806640625,38.75C55.801858192489114,55.9375,76.7656209641861,90.3125,87.24750235003458,107.5C97.72938373588306,124.6875,118.69314650758005,176.25,129.17502789342853,176.25C139.68562676252594,176.25,160.7068245007207,107.5,171.2174233698181,107.5C181.6993047556666,107.5,202.66306752736358,176.25,213.14494891321206,176.25C223.62683029906054,176.25,244.59059307075754,124.6875,255.07247445660602,107.5C265.5543558424545,90.3125,286.5181186141515,55.9375,297,38.75L297,300L45.319976806640625,300Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#7a92a3" d="M45.319976806640625,38.75C55.801858192489114,55.9375,76.7656209641861,90.3125,87.24750235003458,107.5C97.72938373588306,124.6875,118.69314650758005,176.25,129.17502789342853,176.25C139.68562676252594,176.25,160.7068245007207,107.5,171.2174233698181,107.5C181.6993047556666,107.5,202.66306752736358,176.25,213.14494891321206,176.25C223.62683029906054,176.25,244.59059307075754,124.6875,255.07247445660602,107.5C265.5543558424545,90.3125,286.5181186141515,55.9375,297,38.75" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.319976806640625" cy="38.75" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.24750235003458" cy="107.5" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="129.17502789342853" cy="176.25" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.2174233698181" cy="107.5" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="213.14494891321206" cy="176.25" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.07247445660602" cy="107.5" r="4" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="297" cy="38.75" r="7" fill="#7a92a3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#2677b5" stroke="none" d="M45.319976806640625,162.5C55.801858192489114,171.09375,76.7656209641861,188.28125,87.24750235003458,196.875C97.72938373588306,205.46875,118.69314650758005,231.25,129.17502789342853,231.25C139.68562676252594,231.25,160.7068245007207,196.875,171.2174233698181,196.875C181.6993047556666,196.875,202.66306752736358,231.25,213.14494891321206,231.25C223.62683029906054,231.25,244.59059307075754,205.46875,255.07247445660602,196.875C265.5543558424545,188.28125,286.5181186141515,171.09375,297,162.5L297,300L45.319976806640625,300Z" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></path><path fill="none" stroke="#0b62a4" d="M45.319976806640625,162.5C55.801858192489114,171.09375,76.7656209641861,188.28125,87.24750235003458,196.875C97.72938373588306,205.46875,118.69314650758005,231.25,129.17502789342853,231.25C139.68562676252594,231.25,160.7068245007207,196.875,171.2174233698181,196.875C181.6993047556666,196.875,202.66306752736358,231.25,213.14494891321206,231.25C223.62683029906054,231.25,244.59059307075754,205.46875,255.07247445660602,196.875C265.5543558424545,188.28125,286.5181186141515,171.09375,297,162.5" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.319976806640625" cy="162.5" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.24750235003458" cy="196.875" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="129.17502789342853" cy="231.25" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="171.2174233698181" cy="196.875" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="213.14494891321206" cy="231.25" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="255.07247445660602" cy="196.875" r="4" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="297" cy="162.5" r="7" fill="#0b62a4" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 235.984px; top: 74px;"><div class="morris-hover-row-label">2012</div><div class="morris-hover-point" style="color: #0b62a4">
+  Series A:
+  100
+</div><div class="morris-hover-point" style="color: #7A92A3">
+  Series B:
+  90
+</div></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Quick bar -->
+  <aside id="ms-quick-bar" class="ms-quick-bar fixed ms-d-block-lg">
+
+    <ul class="nav nav-tabs ms-quick-bar-list ui-sortable ui-sortable-disabled" role="tablist">
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Launch Chat" data-title="Chat">
+        <a href="#qa-chat" aria-controls="qa-chat" role="tab" data-toggle="tab">
+          <i class="flaticon-chat"></i>
+          <span class="ms-quick-bar-label">Chat</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Launch Email" data-title="Email">
+        <a href="#qa-email" aria-controls="qa-email" role="tab" data-toggle="tab">
+          <i class="flaticon-mail"></i>
+          <span class="ms-quick-bar-label">Email</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Launch To-do-list" data-title="To-do-list">
+        <a href="#qa-toDo" aria-controls="qa-toDo" role="tab" data-toggle="tab">
+          <i class="flaticon-list"></i>
+          <span class="ms-quick-bar-label">To-do</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Launch Reminders" data-title="Reminders">
+        <a href="#qa-reminder" aria-controls="qa-reminder" role="tab" data-toggle="tab">
+          <i class="flaticon-bell"></i>
+          <span class="ms-quick-bar-label">Reminder</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Launch Notes" data-title="Notes">
+        <a href="#qa-notes" aria-controls="qa-notes" role="tab" data-toggle="tab">
+          <i class="flaticon-pencil"></i>
+          <span class="ms-quick-bar-label">Notes</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa ui-sortable-handle ui-draggable ui-draggable-handle ui-draggable-disabled" role="presentation" data-toggle="tooltip" data-placement="left" title="Invite Members" data-title="Invite Members">
+        <a href="#qa-invite" aria-controls="qa-invite" role="tab" data-toggle="tab">
+          <i class="flaticon-share-1"></i>
+          <span class="ms-quick-bar-label">Invite</span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="ms-configure-qa" data-toggle="tooltip" data-placement="left" title="Configure Quick Access">
+
+      <a href="#">
+        <i class="flaticon-hammer"></i>
+        <span class="ms-quick-bar-label">Configure</span>
+      </a>
+
+    </div>
+
+    <!-- Quick bar Content -->
+    <div class="ms-quick-bar-content">
+
+      <div class="ms-quick-bar-header clearfix">
+        <h5 class="ms-quick-bar-title float-left">Title</h5>
+        <button type="button" class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+
+      <div class="ms-quick-bar-body tab-content">
+        <div role="tabpanel" class="tab-pane" id="qa-chat">
+
+          <div class="ms-chat-container">
+
+            <div class="ms-chat-header px-3">
+              <div class="ms-chat-user-container media clearfix">
+                <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                  <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body ms-chat-user-info mt-1">
+                  <h6>Anny Farisha</h6>
+                  <a href="#" class="text-disabled has-chevron fs-12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Available
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="ms-dropdown-list">
+                      <a class="media p-2" href="#">
+                        <div class="media-body">
+                          <span>Busy</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="media-body">
+                          <span>Away</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="media-body">
+                          <span>Offline</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <form class="ms-form my-3" method="post">
+                <div class="ms-form-group my-0 mb-0 has-icon fs-14">
+                  <input type="search" class="ms-form-input w-100" name="search" placeholder="Search for People and Groups" value="">
+                  <i class="flaticon-search text-disabled"></i>
+                </div>
+              </form>
+            </div>
+
+            <div class="ms-chat-body">
+              <ul class="nav nav-tabs tabs-bordered d-flex nav-justified px-3" role="tablist">
+                <li role="presentation" class="fs-12"><a href="#chats" aria-controls="chats" class="active show" role="tab" data-toggle="tab"> Chats </a></li>
+                <li role="presentation" class="fs-12"><a href="#groups" aria-controls="groups" role="tab" data-toggle="tab"> Groups </a></li>
+                <li role="presentation" class="fs-12"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab"> Contacts </a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active show fade in" id="chats">
+                  <ul class="ms-scrollable ms-quickbar-container ps">
+                    <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+                      <div class="ms-chat-status ms-status-away ms-has-new-msg ms-chat-img mr-3 align-self-center">
+                        <span class="msg-count">3</span>
+                        <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>James Zathila</h6> <span class="ms-chat-time">2 Hours ago</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <i class="flaticon-trash ms-delete-trigger"> </i>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+                      <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-5.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Raymart Sandiago</h6> <span class="ms-chat-time">3 Hours ago</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <i class="flaticon-trash ms-delete-trigger"> </i>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+                      <div class="ms-chat-status ms-status-offline ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-6.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Heather Brown</h6> <span class="ms-chat-time">12 Hours ago</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <i class="flaticon-trash ms-delete-trigger"> </i>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+                      <div class="ms-chat-status ms-status-busy ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-1.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Micheal John</h6> <span class="ms-chat-time">Yesterday</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <i class="flaticon-trash ms-delete-trigger"> </i>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+                      <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-2.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>John Doe</h6> <span class="ms-chat-time">3 Days ago</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <i class="flaticon-trash ms-delete-trigger"> </i>
+                      </div>
+                    </li>
+                  <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="groups">
+                  <ul class="ms-scrollable ms-quickbar-container ps">
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>James Zathila</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <ul class="ms-group-members clearfix mt-3 mb-0">
+                          <li> <img src="../../assets/img/we-educate/topper-4.jpg" alt="member"> </li>
+                          <li> <img src="../../assets/img/we-educate/topper-5.jpg" alt="member"> </li>
+                          <li> <img src="../../assets/img/we-educate/topper-6.jpg" alt="member"> </li>
+                          <li class="ms-group-count"> + 12 more </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-1.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Raymart Sandiago</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <ul class="ms-group-members clearfix mt-3 mb-0">
+                          <li> <img src="../../assets/img/we-educate/topper-2.jpg" alt="member"> </li>
+                          <li> <img src="../../assets/img/we-educate/topper-3.jpg" alt="member"> </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>John Doe</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                        <ul class="ms-group-members clearfix mt-3 mb-0">
+                          <li> <img src="../../assets/img/we-educate/topper-5.jpg" alt="member"> </li>
+                          <li> <img src="../../assets/img/we-educate/topper-6.jpg" alt="member"> </li>
+                          <li> <img src="../../assets/img/we-educate/topper-1.jpg" alt="member"> </li>
+                          <li class="ms-group-count"> + 4 more </li>
+                        </ul>
+                      </div>
+                    </li>
+                  <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="contacts">
+                  <ul class="ms-scrollable ms-quickbar-container ps">
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>John Doe</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Raymart Sandiago</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-5.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Micheal John</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-6.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Heather Brown</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-1.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>Mila Freign</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                    <li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+                      <div class="ms-chat-img mr-3 align-self-center">
+                        <img src="../../assets/img/we-educate/topper-2.jpg" class="ms-img-round" alt="people">
+                      </div>
+                      <div class="media-body ms-chat-user-info mt-1">
+                        <h6>James Zathila</h6> <a href="#" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                      </div>
+                    </li>
+                  <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="qa-email">
+
+          <div class="ms-email-container">
+
+            <div class="ms-qa-options">
+              <a href="#" class="btn btn-primary w-100 mt-0 has-icon"> <i class="flaticon-pencil"></i> Compose Email </a>
+            </div>
+
+            <ul class="ms-scrollable ms-quickbar-container ps">
+              <li class="p-3  media ms-email clearfix">
+                <div class="ms-email-img mr-3 ">
+                  <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body ms-email-details">
+                  <span class="ms-email-sender">James Zathila</span>
+                  <h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">2 Hours ago</span>
+                  <p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                </div>
+              </li>
+              <li class="p-3  media ms-email clearfix">
+                <div class="ms-email-img mr-3 ">
+                  <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body ms-email-details">
+                  <span class="ms-email-sender">John Doe</span>
+                  <h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">8 Hours ago</span>
+                  <p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                </div>
+              </li>
+              <li class="p-3  media ms-email clearfix">
+                <div class="ms-email-img mr-3 ">
+                  <img src="../../assets/img/we-educate/topper-5.jpg" class="ms-img-round" alt="people">
+                </div>
+                <div class="media-body ms-email-details">
+                  <span class="ms-email-sender">Heather Brown</span>
+                  <h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">1 Day ago</span>
+                  <p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                </div>
+              </li>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+          </div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="qa-toDo">
+          <div class="ms-quickbar-container ms-todo-list-container ms-scrollable ps">
+
+            <form class="ms-add-task-block">
+              <div class="form-group mx-3 mt-0  fs-14 clearfix">
+                <input type="text" class="form-control fs-14 float-left" id="task-block" name="todo-block" placeholder="Add Task Block" value="">
+                <button type="submit" class="ms-btn-icon bg-primary float-right"><i class="material-icons text-disabled">add</i></button>
+              </div>
+            </form>
+
+            <ul class="ms-todo-list">
+              <li class="ms-card ms-qa-card ms-deletable">
+
+                <div class="ms-card-header clearfix">
+                  <h6 class="ms-card-title">Task Block Title</h6>
+                  <button data-toggle="tooltip" data-placement="left" title="Add a Task to this block" class="ms-add-task-to-block ms-btn-icon float-right"> <i class="material-icons text-disabled">add</i> </button>
+                </div>
+
+                <div class="ms-card-body">
+                  <ul class="ms-list ms-task-block">
+                    <li class="ms-list-item ms-to-do-task ms-deletable">
+                      <label class="ms-checkbox-wrap ms-todo-complete">
+                        <input type="checkbox" value="">
+                        <i class="ms-checkbox-check"></i>
+                      </label>
+                      <span> Task to do </span>
+                      <button type="submit" class="close"><i class="flaticon-trash ms-delete-trigger"> </i></button>
+                    </li>
+                    <li class="ms-list-item ms-to-do-task ms-deletable">
+                      <label class="ms-checkbox-wrap ms-todo-complete">
+                        <input type="checkbox" value="">
+                        <i class="ms-checkbox-check"></i>
+                      </label>
+                      <span>Task to do</span>
+                      <button type="submit" class="close"><i class="flaticon-trash ms-delete-trigger"> </i></button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="ms-card-footer clearfix">
+                  <a href="#" class="text-disabled mr-2"> <i class="flaticon-archive"> </i> Archive </a>
+                  <a href="#" class="text-disabled  ms-delete-trigger float-right"> <i class="flaticon-trash"> </i> Delete </a>
+                </div>
+
+              </li>
+            </ul>
+
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="qa-reminder">
+          <div class="ms-quickbar-container ms-reminders">
+
+            <ul class="ms-qa-options">
+              <li> <a href="#" data-toggle="modal" data-target="#reminder-modal"> <i class="flaticon-bell"></i> New Reminder </a> </li>
+            </ul>
+
+            <div class="ms-quickbar-container ms-scrollable ps">
+
+              <div class="ms-card ms-qa-card ms-deletable">
+                <div class="ms-card-body">
+                  <p> Developer Meeting in Block B </p>
+                  <span class="text-disabled fs-12"><i class="material-icons fs-14">access_time</i> Today - 3:45 pm</span>
+                </div>
+                <div class="ms-card-footer clearfix">
+
+                  <div class="ms-note-editor float-right">
+                    <a href="#" class="text-disabled mr-2" data-toggle="modal" data-target="#reminder-modal"> <i class="flaticon-pencil"> </i> Edit </a>
+                    <a href="#" class="text-disabled  ms-delete-trigger"> <i class="flaticon-trash"> </i> Delete </a>
+                  </div>
+
+                </div>
+              </div>
+              <div class="ms-card ms-qa-card ms-deletable">
+                <div class="ms-card-body">
+                  <p> Start adding change log to version 2 </p>
+                  <span class="text-disabled fs-12"><i class="material-icons fs-14">access_time</i> Tomorrow - 12:00 pm</span>
+                </div>
+                <div class="ms-card-footer clearfix">
+
+                  <div class="ms-note-editor float-right">
+                    <a href="#" class="text-disabled mr-2" data-toggle="modal" data-target="#reminder-modal"> <i class="flaticon-pencil"> </i> Edit </a>
+                    <a href="#" class="text-disabled  ms-delete-trigger"> <i class="flaticon-trash"> </i> Delete </a>
+                  </div>
+
+                </div>
+              </div>
+
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="qa-notes">
+
+          <ul class="ms-qa-options">
+            <li> <a href="#" data-toggle="modal" data-target="#notes-modal"> <i class="flaticon-sticky-note"></i> New Note </a> </li>
+            <li> <a href="#"> <i class="flaticon-excel"></i> Export to Excel </a> </li>
+          </ul>
+
+          <div class="ms-quickbar-container ms-scrollable ps">
+
+            <div class="ms-card ms-qa-card ms-deletable">
+              <div class="ms-card-header">
+                <h6 class="ms-card-title">Don't forget to check with the designer</h6>
+              </div>
+              <div class="ms-card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque,
+                  vel varius metus. Pellentesque eget orci malesuada, venenatis magna et
+                </p>
+                <ul class="ms-note-members clearfix mb-0">
+                  <li class="ms-deletable"> <img src="../../assets/img/we-educate/topper-6.jpg" alt="member"> </li>
+                  <li class="ms-deletable"> <img src="../../assets/img/we-educate/topper-1.jpg" alt="member"> </li>
+                </ul>
+              </div>
+              <div class="ms-card-footer clearfix">
+
+                <div class="dropdown float-left">
+                  <a href="#" class="text-disabled" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="flaticon-share-1"></i> Share
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-menu-header">
+                      <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Share With</span></h6>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li class="ms-scrollable ms-dropdown-list ms-members-list ps">
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-2.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>John Doe</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-3.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>Raymart Sandiago</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-4.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>Heather Brown</span>
+                        </div>
+                      </a>
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
+                  </ul>
+                </div>
+                <div class="ms-note-editor float-right">
+                  <a href="#" class="text-disabled mr-2" data-toggle="modal" data-target="#notes-modal"> <i class="flaticon-pencil"> </i> Edit </a>
+                  <a href="#" class="text-disabled  ms-delete-trigger"> <i class="flaticon-trash"> </i> Delete </a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="ms-card ms-qa-card ms-deletable">
+              <div class="ms-card-header">
+                <h6 class="ms-card-title">Perform the required unit tests</h6>
+              </div>
+              <div class="ms-card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque,
+                  vel varius metus. Pellentesque eget orci malesuada, venenatis magna et
+                </p>
+                <ul class="ms-note-members clearfix mb-0">
+                  <li class="ms-deletable"> <img src="../../assets/img/we-educate/topper-5.jpg" alt="member"> </li>
+                </ul>
+              </div>
+              <div class="ms-card-footer clearfix">
+
+                <div class="dropdown float-left">
+                  <a href="#" class="text-disabled" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="flaticon-share-1"></i> Share
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-menu-header">
+                      <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Share With</span></h6>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li class="ms-scrollable ms-dropdown-list ms-members-list ps">
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-6.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>John Doe</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-1.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>Raymart Sandiago</span>
+                        </div>
+                      </a>
+                      <a class="media p-2" href="#">
+                        <div class="mr-2 align-self-center">
+                          <img src="../../assets/img/we-educate/topper-2.jpg" class="ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                          <span>Heather Brown</span>
+                        </div>
+                      </a>
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
+                  </ul>
+                </div>
+                <div class="ms-note-editor float-right">
+                  <a href="#" class="text-disabled mr-2" data-toggle="modal" data-target="#notes-modal"> <i class="flaticon-pencil"> </i> Edit </a>
+                  <a href="#" class="text-disabled  ms-delete-trigger"> <i class="flaticon-trash"> </i> Delete </a>
+                </div>
+
+              </div>
+            </div>
+
+          <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="qa-invite">
+
+          <div class="ms-quickbar-container text-center ms-invite-member">
+            <i class="flaticon-network"></i>
+            <p>Invite Team Members</p>
+            <form>
+              <div class="ms-form-group">
+                <input type="text" placeholder="Member Email" class="form-control" name="invite-email" value="">
+              </div>
+              <div class="ms-form-group">
+                <button type="submit" name="invite-member" class="btn btn-primary w-100">Invite</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- MODALS -->
+
+  <!-- Reminder Modal -->
+  <div class="modal fade" id="reminder-modal" tabindex="-1" role="dialog" aria-labelledby="reminder-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header bg-secondary">
+          <h5 class="modal-title has-icon text-white"> New Reminder</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+
+        <form>
+
+        <div class="modal-body">
+
+          <div class="ms-form-group">
+            <label>Remind me about</label>
+            <textarea class="form-control" name="reminder"></textarea>
+          </div>
+
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Repeat Daily</span>
+            <label class="ms-switch float-right">
+              <input type="checkbox">
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="ms-form-group">
+                <input type="text" class="form-control datepicker hasDatepicker" name="reminder-date" value="" id="dp1756883816775">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="ms-form-group">
+                <select class="form-control" name="reminder-time">
+                  <option value="">12:00 pm</option>
+                  <option value="">1:00 pm</option>
+                  <option value="">2:00 pm</option>
+                  <option value="">3:00 pm</option>
+                  <option value="">4:00 pm</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Add Reminder</button>
+        </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes Modal -->
+  <div class="modal fade" id="notes-modal" tabindex="-1" role="dialog" aria-labelledby="notes-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header bg-secondary">
+          <h5 class="modal-title has-icon text-white" id="NoteModal">New Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+
+        <form>
+
+        <div class="modal-body">
+
+          <div class="ms-form-group">
+            <label>Note Title</label>
+            <input type="text" class="form-control" name="note-title" value="">
+          </div>
+
+          <div class="ms-form-group">
+            <label>Note Description</label>
+            <textarea class="form-control" name="note-description"></textarea>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary shadow-none" data-dismiss="modal">Add Note</button>
+        </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- Global Required Scripts Start -->
+  <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../../assets/js/popper.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/perfect-scrollbar.js"> </script>
+  <script src="../../assets/js/jquery-ui.min.js"> </script>
+  <!-- Global Required Scripts End -->
+
+  <!-- Page Specific Scripts Start -->
+  <script src="../../assets/js/raphael.min.js"> </script>
+  <script src="../../assets/js/morris.min.js"> </script>
+  <script src="../../assets/js/morris-charts.js"> </script>
+  <!-- Page Specific Scripts End -->
+
+  <!-- Weeducate core JavaScript -->
+  <script src="../../assets/js/framework.js"></script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+
+  <!-- Settings -->
+  <script src="../../assets/js/settings.js"></script>
+
+
+
+
+</body></html>
