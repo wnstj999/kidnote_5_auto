@@ -787,7 +787,7 @@ pre{
   color: #374eae;
 }
 .ms-navbar .ms-nav-link{
-  padding:
+  padding: 0;
 }
 .ms-aside-toggler,
 .ms-nav-toggler{
@@ -835,7 +835,7 @@ body:not(.ms-aside-left-open) .ms-aside-toggler .ms-toggler-bar{
 }
 .ms-navbar li.ms-nav-item .ms-user-img{
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   max-width: 40px;
   cursor: pointer;
 }
@@ -2462,7 +2462,7 @@ input:checked + .ms-switch-slider.ms-switch-dark{
 }
 .accordion .card-header span{
   display: block;
-  vertical-align: inherit;
+  /* vertical-align: inherit; */
   font-size: 14px;
   max-width: 87%;
   color: #3a3952;
@@ -4328,9 +4328,7 @@ border: 0;
   border: 1px solid #eb025d;
   color: #eb025d;
 }
-.ms-star-rating.misc-number{
 
-}
 .ms-star-rating.misc-number .ms-rating-item{
   margin: 0;
   border-radius: 0;
@@ -6842,4 +6840,16 @@ body:not(.ms-settings-open) .ms-settings-toggle:hover{
     background-color: #fbb022;
     color:#ffffff;
     
+}
+body .auth-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh !important;
+}
+
+/* 회원가입이랑 개인정보 입력하라는 문구 중앙 정렬 처리 */
+.ms-auth-form h1,
+.ms-auth-form p {
+  text-align: center;
 }
